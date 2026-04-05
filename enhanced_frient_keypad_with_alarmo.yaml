@@ -1,7 +1,7 @@
 blueprint:
   name: "Enhanced Frient Keypad with Alarm Control Panel (ex: Alarmo)"
   description:
-    "Based on zwiras/frient_keypad_alarmo.
+    "Bbased on zwiras/frient_keypad_alarmo.
     This Blueprint allows the synchronisation of an alarm control panel
     with a Zigbee2MQTT keypad. \nThis means that the status of the alarm control panel
     is transmitted to the keypad and vice versa."
