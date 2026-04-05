@@ -347,7 +347,7 @@ actions:
                     default: !input action_panic
               - conditions:
                   - condition: template
-                    value_template: "{{trigger.payload_json.action_code is not none and custom_pincode_2 is not none and trigger.payload_json.action_code in custom_pincode_2  }}"
+                    value_template: "{{trigger.payload_json.action_code in custom_pincode_1  | default("")  }}"
                 sequence: !input "custom_action_1"
               - conditions:
                   - condition: template
