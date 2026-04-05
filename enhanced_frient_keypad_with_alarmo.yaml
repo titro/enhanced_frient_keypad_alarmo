@@ -174,7 +174,7 @@ blueprint:
           default: []
           selector:
             action: {}
-  source_url: https://github.com/zwiras/frient_keypad_alarmo/blob/main/frient_keypad_with_alarmo.yaml
+  source_url: https://raw.githubusercontent.com/titro/enhanced_frient_keypad_alarmo/main/enhanced_frient_keypad_with_alarmo.yaml
 variables:
   pin_list_var: !input pin_list
   pin_list: "{{ pin_list_var.split(';') }}"
