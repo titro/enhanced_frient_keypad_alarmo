@@ -1,7 +1,8 @@
 blueprint:
   name: "Enhanced Frient Keypad with Alarm Control Panel (ex: Alarmo)"
   description:
-    "Bases on zwiras frient_keypad_alarmo. This Blueprint allows the synchronisation of an alarm control panel
+    "Based on zwiras/frient_keypad_alarmo.
+    This Blueprint allows the synchronisation of an alarm control panel
     with a Zigbee2MQTT keypad. \nThis means that the status of the alarm control panel
     is transmitted to the keypad and vice versa."
   domain: automation
@@ -346,15 +347,15 @@ actions:
                     default: !input action_panic
               - conditions:
                   - condition: template
-                    value_template: "{{ trigger.payload_json.action_code | default('') in custom_pincode_1 and custom_pincode_1 != '' }}"
+                    value_template: "{{ trigger.payload_json.action_code is not none and trigger.payload_json.action_code in custom_pincode_1 }}"
                 sequence: !input "custom_action_1"
               - conditions:
                   - condition: template
-                    value_template: "{{ trigger.payload_json.action_code | default('') in custom_pincode_2 and custom_pincode_2 != '' }}"
+                    value_template: "{{ trigger.payload_json.action_code is not none and trigger.payload_json.action_code in custom_pincode_2 }}"
                 sequence: !input "custom_action_2"
               - conditions:
                   - condition: template
-                    value_template: "{{ trigger.payload_json.action_code | default('') in custom_pincode_3 and custom_pincode_3 != '' }}"
+                    value_template: "{{ trigger.payload_json.action_code is not none and trigger.payload_json.action_code in custom_pincode_3 }}"
                 sequence: !input "custom_action_3"
               - conditions:
                   - condition: template
