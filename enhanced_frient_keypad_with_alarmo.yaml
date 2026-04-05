@@ -347,15 +347,15 @@ actions:
                     default: !input action_panic
               - conditions:
                   - condition: template
-                    value_template: "{{ trigger.payload_json.action_code is not none and trigger.payload_json.action_code in custom_pincode_1 }}"
+                    value_template: "{{ trigger.payload_json.action_code is not none and custom_pincode_1 is not none and trigger.payload_json.action_code in custom_pincode_1 }}"
                 sequence: !input "custom_action_1"
               - conditions:
                   - condition: template
-                    value_template: "{{ trigger.payload_json.action_code is not none and trigger.payload_json.action_code in custom_pincode_2 }}"
+                    value_template: "{{ trigger.payload_json.action_code is not none and custom_pincode_2 is not none and trigger.payload_json.action_code in custom_pincode_2 }}"
                 sequence: !input "custom_action_2"
               - conditions:
                   - condition: template
-                    value_template: "{{ trigger.payload_json.action_code is not none and trigger.payload_json.action_code in custom_pincode_3 }}"
+                    value_template: "{{ trigger.payload_json.action_code is not none and custom_pincode_3 is not none and trigger.payload_json.action_code in custom_pincode_3 }}"
                 sequence: !input "custom_action_3"
               - conditions:
                   - condition: template
